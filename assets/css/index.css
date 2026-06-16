@@ -1,0 +1,330 @@
+/* Rolagem Suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Paleta de Cores baseada no novo protótipo */
+:root {
+    --bg-dark: #140505;       /* Fundo principal escuro/café */
+    --box-red: #5e0b0b;       /* Fundo vermelho das caixas/nav */
+    --box-red-dark: #3a0404;  /* Fundo do form */
+    
+    --text-main: #d1baba;     /* Texto cinza claro para parágrafos */
+    --text-highlight: #ff9d00; /* Laranja/Dourado para Títulos e Destaques */
+    --border-orange: #ff9d00; /* Borda dos formulários */
+    
+    --btn-orange: #ff3b00;    /* Botão enviar */
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+}
+
+/* =========================================
+   HEADER E NAVEGAÇÃO
+========================================= */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.logo-box, .btn-ld {
+    background-color: var(--box-red);
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+}
+
+.logo-box {
+    width: 100px;
+    height: 50px;
+    color: #000;
+}
+
+.btn-ld {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000;
+}
+
+.main-nav {
+    background-color: var(--box-red);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: var(--text-highlight);
+}
+
+.main-nav a {
+    color: var(--text-highlight);
+    text-decoration: none;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+.main-nav a:hover {
+    opacity: 0.8;
+}
+
+/* =========================================
+   LAYOUT GERAL DAS PÁGINAS
+========================================= */
+.page {
+    padding: 80px 40px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: var(--text-highlight);
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.section-desc {
+    max-width: 500px;
+    margin-bottom: 40px;
+}
+
+/* Duas Colunas */
+.two-columns {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.two-columns.align-top {
+    align-items: flex-start;
+}
+
+.col-text, .col-image-large, .col-form {
+    flex: 1;
+}
+
+/* =========================================
+   PAGE 1: SOBRE MIM
+========================================= */
+.large-placeholder {
+    background-color: var(--box-red);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* =========================================
+   PAGE 2: HABILIDADES
+========================================= */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.skill-card {
+    border: 1px solid var(--box-red);
+    background-color: transparent;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-icon {
+    background-color: var(--box-red);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+}
+
+.skill-name {
+    color: var(--text-highlight);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* =========================================
+   PAGE 3: PROJETOS
+========================================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-image {
+    background-color: var(--text-highlight);
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+}
+
+.project-info {
+    background-color: var(--box-red);
+    padding: 20px;
+}
+
+.project-info h3 {
+    color: var(--text-highlight);
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.project-info p {
+    font-size: 12px;
+}
+
+/* =========================================
+   PAGE 4: CONTATO
+========================================= */
+
+/* Formulário */
+.form-wrapper {
+    background-color: var(--box-red-dark);
+    padding: 30px;
+    border: 1px solid var(--box-red);
+}
+
+.form-wrapper h2 {
+    color: var(--text-highlight);
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: var(--text-main);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--box-red);
+    border: 1px solid var(--border-orange);
+    color: var(--text-main);
+    resize: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #220c0c;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #fff;
+}
+
+.btn-submit {
+    background-color: var(--btn-orange);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #d13100;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    background-color: var(--box-red);
+    text-align: center;
+    padding: 15px;
+    color: var(--text-highlight);
+    font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+@media (max-width: 768px) {
+    .two-columns {
+        flex-direction: column;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .form-row {
+        flex-direction: column;
+    }
+}
+
