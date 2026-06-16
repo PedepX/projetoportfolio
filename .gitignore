@@ -1,0 +1,15 @@
+# Pastas do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Pastas de editores
+.vscode/
+.idea/
+
+# Pastas de dependências (caso instale algo futuramente)
+node_modules/
+dist/
+build/
+
+# Logs de erro
+*.log
