@@ -105,6 +105,10 @@ img {
 }
 
 h1 {
+  visibility: hidden;
+}
+
+h2 {
   color: var(--text-highlight);
   font-size: 40px;
   margin-bottom: 30px;
@@ -112,7 +116,7 @@ h1 {
 }
 
 p {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -140,29 +144,29 @@ p {
    PAGE 1: SOBRE MIM
 ========================================= */
 .large-placeholder {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px; 
-    
-    box-shadow: 0 0 15px #ff9d00, 0 0 30px #ff9d00;
-    
-    border-radius: 8px; 
-    overflow: hidden;
-    
-    
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+
+  box-shadow:
+    0 0 15px #ff9d00,
+    0 0 30px #ff9d00;
+
+  border-radius: 8px;
+  overflow: hidden;
+
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 
 .large-placeholder img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
-
 
 /* =========================================
    PAGE 2: HABILIDADES
@@ -198,7 +202,6 @@ p {
     0 0 40px #ff9d00;
 }
 
-
 .skill-icon {
   width: 60px;
   height: 60px;
@@ -231,7 +234,6 @@ p {
   cursor: pointer;
   border-radius: 15px;
   overflow: hidden;
-
 
   transition: all 0.3s ease-in-out;
 }
@@ -272,7 +274,7 @@ p {
 }
 
 .project-info p {
-  font-size: 12px;
+  font-size: 18px;
 }
 
 /* =========================================
@@ -290,7 +292,6 @@ p {
     0 0 10px #ff9d00,
     0 0 20px #ff9d00,
     0 0 40px #ff9d00;
-    
 }
 
 .form-wrapper h2 {
@@ -339,7 +340,7 @@ textarea::placeholder {
 }
 
 h2 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 input:focus,
@@ -398,7 +399,8 @@ footer {
   }
 }
 
-html, body {
+html,
+body {
   width: 100%;
   margin: 0;
   padding: 0;
