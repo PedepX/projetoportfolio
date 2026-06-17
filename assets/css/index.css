@@ -57,6 +57,7 @@ body {
 img {
   max-block-size: 600%;
   text-align: center;
+  align-items: center;
 }
 
 .btn-ld {
@@ -148,6 +149,7 @@ p {
   justify-content: center;
   align-items: center;
   margin: 20px;
+  margin-left: -1px;
 
   box-shadow:
     0 0 15px #ff9d00,
